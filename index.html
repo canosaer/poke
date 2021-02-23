@@ -10,56 +10,129 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/5290a709ed.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="dist/css/main.css">
 
 </head>
 
 <body>
-	<header class="floating-header">
-		<div class="order-button">Order Online</div>
-		<div class="logo">
-			<div class="logo__image"></div>
-			<h1 class="logo__heading">'O ia Poké</h1>
-		</div>
-		<div class="menu-box">
-			<nav class="site-navigation">
-				<ul class="site-navigation__list">
-					<li class="site-navigation__item">
-						<a class="site-navigation__link site-navigation__link_active" href="#">Home</a>
-					</li>
-					<li class="site-navigation__item">
-						<a class="site-navigation__link" href="#">About</a>
-					</li>
-					<li class="site-navigation__item">
-						<a class="site-navigation__link" href="#">Menu</a>
-					</li>
-					<li class="site-navigation__item">
-						<a class="site-navigation__link" href="#">Catering</a>
-					</li>
-					<li class="site-navigation__item">
-						<a class="site-navigation__link" href="#">Contact</a>
-					</li>
-				</ul>
-			</nav>
-			<ul class="social-media">
-				<li class="social-media__item">
-					<a class="social-media__link social-media__link_f" href="#"></a>
-				</li>
-				<li class="social-media__item">
-					<a class="social-media__link social-media__link_yelp" href="#"></a>
-				</li>
-				<li class="social-media__item">
-					<a class="social-media__link social-media__link_trip-advisor" href="#"></a>
-				</li>
-				<li class="social-media__item">
-					<a class="social-media__link social-media__link_twitter" href="#"></a>
-				</li>
-				<li class="social-media__item">
-					<a class="social-media__link social-media__link_instagram" href="#"></a>
-				</li>
-			</ul>
-		</div>
-	</header>
+	<main class="content-grid">
+
+		<section class="intro">
+			<header class="floating-header">
+				<div class="order-button">Order Online</div>
+				<div class="logo">
+					<div class="logo__image"></div>
+					<h2 class="logo__heading">'O ia Poké</h2>
+				</div>
+				<div class="menu-box">
+					<nav class="site-navigation">
+						<ul class="site-navigation__list">
+							<li class="site-navigation__item">
+								<a class="site-navigation__link site-navigation__link_active" href="#">Home</a>
+							</li>
+							<li class="site-navigation__item">
+								<a class="site-navigation__link" href="#">About</a>
+							</li>
+							<li class="site-navigation__item">
+								<a class="site-navigation__link" href="#">Menu</a>
+							</li>
+							<li class="site-navigation__item">
+								<a class="site-navigation__link" href="#">Catering</a>
+							</li>
+							<li class="site-navigation__item">
+								<a class="site-navigation__link" href="#">Contact</a>
+							</li>
+						</ul>
+					</nav>
+					<ul class="social-media">
+						<li class="social-media__item">
+							<a class="social-media__link social-media__link_f" href="#"></a>
+						</li>
+						<li class="social-media__item">
+							<a class="social-media__link social-media__link_yelp" href="#"></a>
+						</li>
+						<li class="social-media__item">
+							<a class="social-media__link social-media__link_trip-advisor" href="#"></a>
+						</li>
+						<li class="social-media__item">
+							<a class="social-media__link social-media__link_twitter" href="#"></a>
+						</li>
+						<li class="social-media__item">
+							<a class="social-media__link social-media__link_instagram" href="#"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="toggle">
+					<div clas="toggle__line"></div>
+					<div clas="toggle__line"></div>
+				</div>
+				<div class="chat">
+					<i class="chat__icon fas fa-comment-alt"></i>
+				</div>
+				<div class="return-arrow">
+					<div class="return-arrow__head"></div>
+					<div class="return-arrow__line"></div>
+				</div>
+			</header>
+			<h1 class="intro__title">'O ia Poké</h1>
+			<div class="intro__subtitle-display">
+				<h3 class="intro__subtitle">Quality Products</h3>
+				<h3 class="intro__subtitle">Hawaiian Flavours</h3>
+			</div>
+			<p class="intro__detail">Open Daily for Takeout & Delivery</p>
+		</section>
+
+		<section class="about">
+			<div class="about__image"></div>
+			<div class="about__postcard">
+				<h2 class="about__heading">Our Poke</h2>
+				<p class="about__text">We serve fresh, delicious poke in a unique and inviting atmosphere. Discover a whole world of flavor that truly is something to write home about! We think you'll agree with the food critics that our cuisine is simply not to be missed. Join us today for an authentic dining experience that will leave you wanting more!</p>
+				<a class="about__menu-link" href="#">See Menu</a>
+			</div>
+		</section>
+
+		<section class="gallery">
+			<img class="gallery__item" src="src/img/gallery__item1.jpg" loading="lazy" alt="sharing a bowl">
+			<img class="gallery__item" src="src/img/gallery__item2.jpg" loading="lazy" alt="bowl of goodness">
+			<img class="gallery__item" src="src/img/gallery__item3.jpg" loading="lazy" alt="delicious drinks">
+			<img class="gallery__item" src="src/img/gallery__item4.jpg" loading="lazy" alt="bowl on the go">
+			<img class="gallery__item" src="src/img/gallery__item5.jpg" loading="lazy" alt="premium meat">
+			<img class="gallery__item" src="src/img/gallery__item6.jpg" loading="lazy" alt="hula dancer">
+			<img class="gallery__item" src="src/img/gallery__item7.jpg" loading="lazy" alt="doggie bag">
+			<img class="gallery__item" src="src/img/gallery__item8.jpg" loading="lazy" alt="fresh ingredients">
+		</section>
+
+		<section class="catering">
+			<div class="catering__card">
+				<h2 class="catering__heading">Our Catering</h2>
+				<p class="catering__text">Poke is great for any occasion! Check out our catering menu to make your event a special experience. We'll handle the food so you can focus on the big picture!</p>
+				<a class="catering__link" href="#">Find Out More</a>
+			</div>
+		</section>
+
+		<section class="outro">
+			<div class="outro__card">
+				<h2 class="outro__heading">Hungry?</h2>
+				<p class="outro__caption">Give in to our mouthwatering tastes! We'd love to serve you a unique and delicious meal today!</p>
+				<div class="address">
+					<p class="address__street">500 Terry Francois Street</p>
+					<p class="address__region">San Francisco, CA 94158</p>
+				</div>
+				<div class="hours">
+					<h3 class="hours__heading">We're Open:</h3>
+					<p class="hours__days">Monday - Saturday</p>
+					<p class="hours__times">12pm - 9pm</p>
+				</div>
+				<div class="contact">
+					<p class="contact__phone">Tel: 123-456-7890</p>
+					<p class="contact__email">info@mysite.com</p>
+				</div>
+			</div>
+			<div class="outro__footer">&#169; by 'O ia Poké</div>
+		</section>
+		
+	</main>
 
 	<script src="dist/js/main.js"></script>
 
