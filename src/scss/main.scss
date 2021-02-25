@@ -1,6 +1,6 @@
 /* 
 ==============================================
-CONTENT:	Project Name Here
+CONTENT:	'O ia Poke
 AUTHOR:		Eric Canosa
 ==============================================
 
@@ -14,10 +14,172 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @use 'reset';
+@use 'variables';
+@use 'mixins';
 
 
 /* 1. STYLES ================================= */
 
 *, *::before, *::after {
 	box-sizing: border-box;
+}
+
+body{
+	font-family: variables.$body-text;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+.content-grid{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 35rem 20rem 20rem 20rem 20rem 20rem;
+}
+
+// ----- INTRO SECTION -----
+.intro{
+	display: flex;
+	flex-direction: column;
+	grid-row: 1/2;
+	grid-column: 1/-1;
+	background: url(../../src/img/header_img.jpg);
+	background-position: bottom;
+	background-size: 61rem;
+	text-align: center;
+	color: white;
+
+	&__title{
+		margin: 11.5rem 0 1.5rem;;
+		font-size: 43px;
+		font-family: variables.$heading-text;
+		transform: rotate(-6deg)
+	}
+
+	&__subtitle{
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 20px;
+		letter-spacing: 0.1rem;
+		margin-bottom: 0.4rem;
+	}
+
+	&__detail{
+		margin-top: 1rem;
+		font-size: 1.25rem;
+	}
+}
+
+.floating-header{
+	display: flex;
+	position: relative;
+}
+
+.order-button{
+	background: variables.$green;
+	color: white;
+	text-transform: uppercase;
+	height: 3rem;
+	padding: 1rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 170%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+
+	&__image{
+		background: url(../../src/img/logo.png);
+		background-size: cover;
+		background-position: center;
+		width: 5rem;
+		height: 11rem;
+		filter: brightness(0) invert(1);
+		margin-top: -0.5rem;
+	}
+
+	&__text{
+		margin-top: -1.75rem;
+		text-transform: uppercase;
+		color: white;
+		// transform:scale(1,1.5);
+	}
+}
+
+.menu-box{
+	display: none;
+}
+
+.toggle{
+	display: flex;
+	flex-direction: column;
+	width: 1.75rem;
+	height: 1rem;
+	justify-content: space-between;
+	margin: 1.5rem 1rem 0 auto;
+	cursor: pointer;
+
+	&__line{
+		width: 100%;
+		height: 0.2rem;
+		background: white;
+	}
+}
+
+.chat{
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	color: white;
+	background: variables.$green;
+	font-size: 0.75rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+}
+
+
+
+// ----- ABOUT SECTION -----
+.about{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 5rem 5rem 5rem 5rem;
+	grid-row: 2/3;
+	grid-column: 1/-1;
+}
+
+.gallery{
+	display: none;
+	// display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 5rem 5rem 5rem 5rem;
+	grid-row: 3/4;
+	grid-column: 1/-1;
+}
+
+.catering{
+	display: flex;
+	flex-direction: column;
+	grid-row: 4/5;
+	grid-column: 1/-1;
+}
+
+.outro{
+	display: flex;
+	flex-direction: column;
+	grid-row: 5/6;
+	grid-column: 1/-1;
 }
