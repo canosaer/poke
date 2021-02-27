@@ -11,3 +11,22 @@
     @content;
   }
 }
+
+@mixin inner-card-format{
+  padding: 2rem;
+	color: variables.$green;
+	text-align: center;
+}
+
+@mixin card-button-format{
+  margin: 2.675rem auto auto;
+  border: 2px solid variables.$green;
+  line-height: 1.5;
+}
+
+@mixin card-heading-format{
+  font-size: 1.75rem;
+  font-family: variables.$heading-text;
+  margin: 1rem 0 2.5rem;
+  transform: rotate(-6deg)
+}
