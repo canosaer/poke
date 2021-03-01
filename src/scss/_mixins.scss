@@ -30,3 +30,10 @@
   margin: 1rem 0 2.5rem;
   transform: rotate(-6deg)
 }
+
+@mixin wavy-lines{
+	content:"";
+	position: absolute;
+	background: url(../../src/img/wavy.png);
+	background-position: center;
+}
