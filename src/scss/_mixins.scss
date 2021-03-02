@@ -1,7 +1,7 @@
 @use 'variables';
 
 @mixin tablet {
-    @media screen and (min-width: variables.$tablet-width){
+    @media (min-width: variables.$tablet-width){
       @content;
     }
   }

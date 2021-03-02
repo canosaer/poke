@@ -53,7 +53,7 @@ a {
 
 	@include mixins.tablet {
 		background-size: cover;
-		background-position: 0 -6rem;
+		background-position: center;
 	}
 
 	&__title{
@@ -61,7 +61,23 @@ a {
 		margin: 11.5rem auto 1.5rem;;
 		font-size: 43px;
 		font-family: variables.$heading-text;
-		transform: rotate(-6deg)
+		transform: rotate(-6deg);
+
+		@include mixins.tablet {
+			font-size: 108px;
+		}
+
+		@include mixins.desktop {
+			font-size: 176px;
+		}
+		
+	}
+
+	&__subtitle-display{
+		@include mixins.tablet {
+			display: flex;
+			justify-content: center;
+		}
 	}
 
 	&__subtitle{
@@ -70,6 +86,10 @@ a {
 		font-size: 20px;
 		letter-spacing: 0.1rem;
 		margin-bottom: 0.4rem;
+
+		@include mixins.tablet {
+			margin-right: 0.5rem;
+		}
 	}
 
 	&__detail{
@@ -99,11 +119,12 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	order: 1;
+	
 
 	@include mixins.tablet {
 		height: 2.75rem;
 		margin-right: 2.4rem;
+		order: 1;
 	}
 }
 
@@ -152,17 +173,21 @@ a {
 }
 
 .menu-box{
-	display: none;
-
+	display: flex;
 	@include mixins.tablet {
 		position: relative;
-		display: flex;
 		margin: 0 0 0 auto;
 	}
 	
 }
 
 .site-navigation{
+
+	display: none;
+
+	@include mixins.tablet {
+		display: flex;
+	}
 
 	&__list{
 		display: flex;
@@ -175,19 +200,28 @@ a {
 		color: #e8e6e6;
 		text-transform: uppercase;
 		padding: 1rem;
+
+		&_active{
+			color: variables.$green;
+		}
 	}
 
 }
 
 .social-media{
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	top: 13rem;
-	right: -10.375rem;
-	width: 2.5rem;
-	height: 11rem;
-	justify-content: space-between;
+
+	display: none;
+
+	@include mixins.tablet {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: 13rem;
+		right: 2rem;
+		width: 2.5rem;
+		height: 11rem;
+		justify-content: space-between;
+	}
 
 	&__link{
 		width: 1rem;
@@ -237,6 +271,7 @@ a {
 	width: 3.25rem;
 	height: 3.25rem;
 	border-radius: 50%;
+	z-index: 2;
 }
 
 
