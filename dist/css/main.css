@@ -302,10 +302,12 @@ a {
 
 .menu-box {
   display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: flex-end;
 }
 @media (min-width: 768px) {
   .menu-box {
-    position: relative;
     margin: 0 0 0 auto;
   }
 }
@@ -318,18 +320,37 @@ a {
     display: flex;
   }
 }
+.site-navigation_open {
+  display: flex;
+  background: #FEBC32;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20.6rem;
+  z-index: 3;
+}
 .site-navigation__list {
   display: flex;
   margin: 1rem 2.25rem 0 0;
   width: 32.75rem;
   justify-content: space-between;
+  color: #e8e6e6;
+}
+.site-navigation__list_open {
+  flex-direction: column;
+  text-align: left;
+  margin: 2.75rem 0 300% 2rem;
+  color: black;
+  height: 18rem;
 }
 .site-navigation__link {
-  color: #e8e6e6;
   text-transform: uppercase;
   padding: 1rem;
 }
 .site-navigation__link_active {
+  color: #1B846F;
+}
+.site-navigation__link:hover {
   color: #1B846F;
 }
 
@@ -347,6 +368,15 @@ a {
     height: 11rem;
     justify-content: space-between;
   }
+}
+.social-media_open {
+  display: flex;
+  z-index: 4;
+  position: absolute;
+  right: 4rem;
+  top: 25rem;
+  width: 12.5rem;
+  justify-content: space-between;
 }
 .social-media__link {
   width: 1rem;
@@ -371,6 +401,8 @@ a {
   justify-content: space-between;
   margin: 1.5rem 1rem 0 auto;
   cursor: pointer;
+  z-index: 4;
+  position: relative;
 }
 @media (min-width: 768px) {
   .toggle {
@@ -381,6 +413,20 @@ a {
   width: 100%;
   height: 0.2rem;
   background: white;
+}
+.toggle__line_open-1 {
+  background: #1B846F;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+}
+.toggle__line_open-2 {
+  background: #1B846F;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
 }
 
 .chat {
@@ -658,6 +704,7 @@ a {
   font-family: "Pacifico", cursive;
   margin: 1rem 0 2.5rem;
   transform: rotate(-6deg);
+  margin-top: auto;
 }
 @media (min-width: 1200px) {
   .about__heading {
@@ -679,6 +726,7 @@ a {
   border: 2px solid #1B846F;
   line-height: 1.5;
   padding: 0.375rem 1.825rem;
+  margin-bottom: auto;
 }
 @media (min-width: 1200px) {
   .about__menu-link {
@@ -743,6 +791,8 @@ a {
   }
 }
 .catering__card {
+  display: flex;
+  flex-direction: column;
   margin: auto;
   width: 63%;
   height: 25rem;
@@ -774,6 +824,7 @@ a {
   font-family: "Pacifico", cursive;
   margin: 1rem 0 2.5rem;
   transform: rotate(-6deg);
+  margin-top: auto;
 }
 .catering__text {
   line-height: 1.825;
@@ -784,6 +835,7 @@ a {
   border: 2px solid #1B846F;
   line-height: 1.5;
   padding: 0.375rem 0.9rem;
+  margin-bottom: auto;
 }
 
 .outro {

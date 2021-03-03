@@ -172,8 +172,11 @@ a {
 
 .menu-box{
 	display: flex;
+	position: relative;
+	width: 100%;
+	justify-content: flex-end;
+
 	@include mixins.landscape {
-		position: relative;
 		margin: 0 0 0 auto;
 	}
 	
@@ -187,19 +190,41 @@ a {
 		display: flex;
 	}
 
+	&_open{
+		display: flex;
+		background: variables.$yellow;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 20.6rem;
+		z-index: 3;
+	}
+
 	&__list{
 		display: flex;
 		margin: 1rem 2.25rem 0 0;
 		width: 32.75rem;
 		justify-content: space-between;
+		color: #e8e6e6;
+
+		&_open{
+			flex-direction: column;
+			text-align: left;
+			margin: 2.75rem 0 300% 2rem;
+			color: black;
+			height: 18rem;
+		}
 	}
 
 	&__link{
-		color: #e8e6e6;
 		text-transform: uppercase;
 		padding: 1rem;
 
 		&_active{
+			color: variables.$green;
+		}
+
+		&:hover{
 			color: variables.$green;
 		}
 	}
@@ -218,6 +243,16 @@ a {
 		right: 2rem;
 		width: 2.5rem;
 		height: 11rem;
+		justify-content: space-between;
+	}
+
+	&_open{
+		display: flex;
+		z-index: 4;
+		position: absolute;
+		right: 4rem;
+		top: 25rem;
+		width: 12.5rem;
 		justify-content: space-between;
 	}
 
@@ -245,6 +280,8 @@ a {
 	justify-content: space-between;
 	margin: 1.5rem 1rem 0 auto;
 	cursor: pointer;
+	z-index: 4;
+	position: relative;
 
 	@include mixins.landscape {
 		display: none;
@@ -254,6 +291,22 @@ a {
 		width: 100%;
 		height: 0.2rem;
 		background: white;
+
+		&_open-1{
+			background: variables.$green;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 0.5rem;
+			right: 0;
+		}
+
+		&_open-2{
+			background: variables.$green;
+			transform:rotate(-45deg);
+			position: absolute;
+			top: 0.5rem;
+			right: 0;
+		}
 	}
 }
 
@@ -328,6 +381,7 @@ a {
 
 	&__heading{
 		@include mixins.card-heading-format;
+		margin-top: auto;
 
 		@include mixins.wide-screen {
 			grid-column: 1/-1;
@@ -347,6 +401,7 @@ a {
 	&__menu-link{
 		@include mixins.card-button-format;
 		padding: 0.375rem 1.825rem;
+		margin-bottom: auto;
 
 		@include mixins.wide-screen {
 			margin: auto;
@@ -413,6 +468,8 @@ a {
 	}
 
 	&__card{
+		display: flex;
+		flex-direction: column;
 		margin: auto;
 		width: 63%;
 		height: 25rem;
@@ -438,6 +495,7 @@ a {
 
 	&__heading{
 		@include mixins.card-heading-format;
+		margin-top: auto;
 	}
 
 	&__text{
@@ -448,6 +506,7 @@ a {
 		display: inline-block;
 		@include mixins.card-button-format;
 		padding: 0.375rem 0.9rem;
+		margin-bottom: auto;
 	}
 }
 

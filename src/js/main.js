@@ -11,3 +11,43 @@ Textblock([{
      container: "self",
      fontSize_Units: "rem"
     }]);
+
+// const toggleButton = document.querySelector(`.toggle`)
+// const siteNavigation = document.querySelector(`.site-navigation`)
+// const siteNavigationList = document.querySelector(`.site-navigation__list`)
+// const socialMedia = document.querySelector(`.social-media`)
+const toggleMenuElements = {
+    toggle: document.querySelector(`.toggle`),
+    siteNavigation: document.querySelector(`.site-navigation`),
+    siteNavigationList: document.querySelector(`.site-navigation__list`),
+    socialMedia: document.querySelector(`.social-media`),
+    toggleLines: document.querySelectorAll(`.toggle__line`)
+}
+
+class MenuToggle{
+    toggleMenuElements = null
+    
+    constructor(elements){
+        this.toggle = elements.toggle
+        this.siteNavigation = elements.siteNavigation
+        this.siteNavigationList = elements.siteNavigationList
+        this.socialMedia = elements.socialMedia
+        this.toggleLines = elements.toggleLines
+        this.setup()
+    }
+
+    setup() {
+    
+        this.clickHandler = (evt) => {
+            this.toggleLines[0].classList.toggle(`toggle__line_open-1`)
+            this.toggleLines[1].classList.toggle(`toggle__line_open-2`)
+            this.siteNavigation.classList.toggle(`site-navigation_open`)
+            this.siteNavigationList.classList.toggle(`site-navigation__list_open`)
+            this.socialMedia.classList.toggle(`social-media_open`)
+        }
+
+        this.toggle.addEventListener(`click`, this.clickHandler)
+    }
+}
+
+const toggleMenu = new MenuToggle(toggleMenuElements)
