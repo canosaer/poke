@@ -33,16 +33,16 @@ gsap.from(".about__postcard", {
     },
     y: 200,
     duration: .5
-  });
-
-gsap.from(".catering__card", {
-    scrollTrigger: {
-        trigger: ".catering",
-        start: "center bottom",
-    },
-    x: -2000,
-    duration: .6
 });
+
+// gsap.from(".catering__card", {
+//     scrollTrigger: {
+//         trigger: ".catering",
+//         start: "center bottom",
+//     },
+//     x: -2000,
+//     duration: .6
+// });
 
 gsap.to(returnArrow, {
     scrollTrigger: {
@@ -74,11 +74,30 @@ class MenuToggle{
     setup() {
     
         this.clickHandler = (evt) => {
-            this.toggleLines[0].classList.toggle(`toggle__line_open-1`)
-            this.toggleLines[1].classList.toggle(`toggle__line_open-2`)
-            this.siteNavigation.classList.toggle(`site-navigation_open`)
-            this.siteNavigationList.classList.toggle(`site-navigation__list_open`)
-            this.socialMedia.classList.toggle(`social-media_open`)
+            if(!this.siteNavigation.classList.contains(`site-navigation_open`)){
+                this.dimmer = document.createElement("div")
+                this.dimmer.classList.add(`dimmer`)
+                document.querySelector(`body`).appendChild(this.dimmer)
+                document.querySelector(`body`).style.overflowX = `hidden`
+                this.siteNavigation.classList.toggle(`site-navigation_open`)
+                this.toggleLines[0].classList.toggle(`toggle__line_open-1`)
+                this.toggleLines[1].classList.toggle(`toggle__line_open-2`)
+                this.siteNavigationList.classList.toggle(`site-navigation__list_open`)
+                this.socialMedia.classList.toggle(`social-media_open`)
+                setTimeout(() => { this.siteNavigation.style.width = `20.6rem` }, 10);
+            }
+            else{
+                this.siteNavigation.style.width = `0`
+                this.socialMedia.classList.toggle(`social-media_open`)
+                this.dimmer.remove()
+                setTimeout(() => { 
+                    this.siteNavigation.classList.toggle(`site-navigation_open`)
+                    this.toggleLines[0].classList.toggle(`toggle__line_open-1`)
+                    this.toggleLines[1].classList.toggle(`toggle__line_open-2`)
+                    this.siteNavigationList.classList.toggle(`site-navigation__list_open`)
+                    document.querySelector(`body`).style.overflowX = `visible`
+                }, 200);
+            }
         }
 
         this.toggle.addEventListener(`click`, this.clickHandler)

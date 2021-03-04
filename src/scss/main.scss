@@ -26,6 +26,7 @@ TABLE OF CONTENTS:
 
 body{
 	font-family: variables.$body-text;
+	position: relative;
 }
 
 a {
@@ -185,6 +186,7 @@ a {
 .site-navigation{
 
 	display: none;
+	transition: width 200ms ease-out;
 
 	@include mixins.landscape {
 		display: flex;
@@ -196,7 +198,7 @@ a {
 		position: absolute;
 		right: 0;
 		top: 0;
-		width: 20.6rem;
+		width: 0;
 		z-index: 3;
 	}
 
@@ -358,6 +360,10 @@ a {
 		height: 1.75rem;
 		width: 2px;
 		margin-top: -1rem
+	}
+
+	@include mixins.landscape {
+		display: none;
 	}
 }
 
@@ -680,4 +686,17 @@ a {
 		text-align: right;
 		align-self: end;
 	}
+}
+
+// ----- DIMMER FUNCTION -----
+
+.dimmer{
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.5;
+	left: 0;
+	top: 0;
 }
