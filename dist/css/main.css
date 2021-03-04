@@ -1110,4 +1110,8 @@ a {
   left: 0;
   top: 0;
 }
+
+.no-width {
+  width: 0;
+}
 /*# sourceMappingURL=main.css.map */

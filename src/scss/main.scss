@@ -692,7 +692,7 @@ a {
 	}
 }
 
-// ----- DIMMER FUNCTION -----
+// ----- UTILITY -----
 
 .dimmer{
 	position: absolute;
@@ -703,4 +703,8 @@ a {
 	opacity: 0.5;
 	left: 0;
 	top: 0;
+}
+
+.no-width{
+	width: 0;
 }
