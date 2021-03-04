@@ -83,8 +83,8 @@ class MenuToggle{
                 this.toggleLines[0].classList.toggle(`toggle__line_open-1`)
                 this.toggleLines[1].classList.toggle(`toggle__line_open-2`)
                 this.siteNavigationList.classList.toggle(`site-navigation__list_open`)
-                this.socialMedia.classList.toggle(`social-media_open`)
                 setTimeout(() => { this.siteNavigation.style.width = `20.6rem` }, 10);
+                setTimeout(() => { this.socialMedia.classList.toggle(`social-media_open`) }, 100);
             }
             else{
                 this.siteNavigation.style.width = `0`
