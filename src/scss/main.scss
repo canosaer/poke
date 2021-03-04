@@ -190,6 +190,9 @@ a {
 
 	@include mixins.landscape {
 		display: flex;
+		background: unset;
+		position: unset;
+		width: unset;
 	}
 
 	&_open{

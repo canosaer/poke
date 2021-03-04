@@ -320,6 +320,9 @@ a {
 @media (min-width: 768px) {
   .site-navigation {
     display: flex;
+    background: unset;
+    position: unset;
+    width: unset;
   }
 }
 .site-navigation_open {

@@ -96,6 +96,7 @@ class MenuToggle{
                     this.toggleLines[1].classList.toggle(`toggle__line_open-2`)
                     this.siteNavigationList.classList.toggle(`site-navigation__list_open`)
                     document.querySelector(`body`).style.overflowX = `visible`
+                    this.siteNavigation.style.width = `unset`
                 }, 200);
             }
         }
