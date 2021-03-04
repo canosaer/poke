@@ -329,6 +329,38 @@ a {
 	}
 }
 
+.return-arrow{
+	position: fixed;
+	bottom: 5rem;
+	left: 1rem;
+	width: 3.25rem;
+	height: 3.25rem;
+	border: 1px solid gray;
+	z-index: 2;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	opacity: 0;
+
+	&__head{
+		border-top: 2px solid black;
+		border-left: 2px solid black;
+		transform: rotate(45deg);
+		height: 1rem;
+		width: 1rem;
+		margin-top: 0.75rem;
+	}
+
+	&__line{
+		background: black;
+		height: 1.75rem;
+		width: 2px;
+		margin-top: -1rem
+	}
+}
+
 
 
 // ----- ABOUT SECTION -----

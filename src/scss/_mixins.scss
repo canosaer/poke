@@ -28,6 +28,11 @@
   margin: 2.675rem auto auto;
   border: 2px solid variables.$green;
   line-height: 1.5;
+
+  &:hover{
+    background:variables.$green;
+    color: white;
+  }
 }
 
 @mixin card-heading-format{
